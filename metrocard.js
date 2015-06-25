@@ -4,7 +4,8 @@ function calcMetrocard (currentValue) {
   var end     = 6000;
 
   while (start <= end) {
-    var cardValue = Math.round(currentValue + (start * 1.11));
+    var bonus     = Math.round(start * 1.11 * 5)
+    var cardValue = Math.round(currentValue + bonus);
     if (cardValue % 275 === 0) { results.push(start / 100); }
     start += 5;
   }
